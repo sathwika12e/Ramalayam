@@ -1,0 +1,12 @@
+.App{
+    display:grid;
+    grid-template-columns:25vw 75vw;
+     
+     grid-template-areas: "header header"
+     "sidebar sidebar"
+     "mainpage mainpage"
+     "footer footer";
+     
+     width:100%;
+     height:100vh;
+}

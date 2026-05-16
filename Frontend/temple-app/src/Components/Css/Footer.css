@@ -1,0 +1,10 @@
+.footer{
+    font-size: 2vh;
+    margin-top: 0px;
+    grid-area:footer;
+    height:6vh;
+    background-color:rgb(164, 172, 238);
+    text-align: center;
+    padding: 5px;
+    font-weight: 500;
+}

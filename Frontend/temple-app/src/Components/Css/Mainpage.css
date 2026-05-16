@@ -1,0 +1,91 @@
+.mainpage{
+   
+    color:black;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+   align-items: center;
+    margin-top: 0px;
+    grid-area:mainpage;
+    height:70vh;
+    width:100%;
+    background-color:rgb(240, 237, 235);
+    
+}
+.tablediv{
+    width: 90%;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-top: 20px;
+    text-overflow: hidden;
+}
+.table{
+    border-collapse: collapse;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.table th,
+.table td{
+    padding: 10px;
+    text-align: left;
+}
+.table tbody tr{
+    background-color: whitesmoke;
+    height: 50px;
+}
+
+.paymentdetails-maincontainer{
+    font-size: 1.5vh;
+    width: min(95%, 600px);
+    max-width: 100%;
+    height: auto;
+    background-color: white;
+    margin-top: 5vh;
+    border-radius: 2vh;
+    padding: 2vh 2vw;
+    box-sizing: border-box;
+}
+.paymentdetails-maincontainer h3 {
+   
+      margin-top:2vh;
+      margin-bottom:3vh;
+}
+.paymentdetails-maincontainer select{
+    width: 100%;
+    max-width: 250px;
+    font-size: 1.5vh;
+    text-align: center;
+    height: 4vh;
+    border: 2px solid dodgerblue;
+    border-radius: 1vh;
+    display: block;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.paymentdetails-maincontainer input{
+    width: 100%;
+    max-width: 250px;
+    font-size: 1.7vh;
+    text-align: center;
+    height: 4vh;
+    border: 2px solid dodgerblue;
+    border-radius: 1vh;
+    display: block;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.paymentdetails-maincontainer button{
+     font-size: 1.7vh;
+    height:4vh;
+    width: 100%;
+    max-width: 200px;
+    background-color: blue;
+    color: white;
+    border-radius: 0.8vh;
+    border: 2px solid black;
+    display: block;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
