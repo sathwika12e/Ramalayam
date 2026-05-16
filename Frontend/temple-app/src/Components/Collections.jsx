@@ -6,7 +6,7 @@ function Collections(){
     const [data,setData]=useState([])
     let navigate=useNavigate()
     useEffect(()=>{
-        let get_url="http://127.0.0.1:8000/templeapi/paymentdetails/"
+        let get_url="https://ramalayam-database.onrender.com/templeapi/paymentdetails/"
         axios.get(get_url).then((response)=>{
             setData(response.data)
             console.log(response.data)

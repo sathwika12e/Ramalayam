@@ -1,4 +1,4 @@
-// http://127.0.0.1:8000/templeapi/paymentdetails/
+// http://1:8000/templeapi/paymentdetails/
 import './Css/Mainpage.css'
 import axios from 'axios'
 import { useEffect,useState } from 'react'
@@ -10,7 +10,7 @@ function Paymentdetails(){
    const [persondetails,setPersondetails]=useState([])
     let amtRef=useRef();
     useEffect(()=>{
-        let get_url="http://127.0.0.1:8000/templeapi/devottee/"
+        let get_url="https://ramalayam-database.onrender.com/templeapi/devottee/"
         axios.get(get_url).then((response)=>{
             setPersondetails(response.data)
            
@@ -25,7 +25,7 @@ function Paymentdetails(){
             "amt":amtRef.current.value
         }
         console.log(userdetails)
-        let post_url="http://127.0.0.1:8000/templeapi/paymentdetails/"
+        let post_url="https://ramalayam-database.onrender.com/templeapi/paymentdetails/"
         axios.post(post_url,userdetails).then((response)=>{amtRef.current.value="",setName(""),setType(""),alert('datasubmitted successfully')})
 
     

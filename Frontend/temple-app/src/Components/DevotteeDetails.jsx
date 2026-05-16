@@ -9,7 +9,7 @@ function DevotteeDetails(){
     const [data,setData]=useState("")
     let [backupdata,setBackupdata]=useState();
     useEffect(()=>{
-        let get_url="http://127.0.0.1:8000/templeapi/devottee/"
+        let get_url="https://ramalayam-database.onrender.com/templeapi/devottee/"
         axios.get(get_url).then((response)=>{
             setDevotees(response.data)
             backupdata=response.data

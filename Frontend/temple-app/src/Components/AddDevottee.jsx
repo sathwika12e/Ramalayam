@@ -11,10 +11,10 @@ function AddDevottee(){
             "name":nameRef.current.value,
              "land":landRef.current.value
         }
-       let post_url="http://127.0.0.1:8000/templeapi/devottee/"
+       let post_url="https://ramalayam-database.onrender.com/templeapi/devottee/"
        axios.post(post_url,UserDetails).then((response)=>{
         nameRef.current.value=""
-        landRef.cuurent.value=""
+        landRef.current.value=""
        
        })
         navigate('/devottee')
