@@ -10,7 +10,7 @@ function Header(){
             
             <img className="image1" src={templevigrahas}/>
             <div style={{display:"flex",flexDirection:"column",alignItems:"center",height:"100%",width:"50%",fontSize:"1.5vh"}}>
-             <p style={{color:"orangered",fontWeight:"900"}}>జై శ్రీరాం </p>
+             <p style={{color:"orangered",fontWeight:"900"}}>జై శ్రీరామ </p>
             <p className="para">శ్రీ కోదండరామస్వామి ఆలయం </p>
              <p className="para"> బోయలపాడు </p>
              </div>
