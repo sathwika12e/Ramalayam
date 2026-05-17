@@ -8,15 +8,17 @@ import TempleGallery from './TempleGallery'
 import AddDevottee from './AddDevottee'
 import Collections from './Collections'
 import PersonDetailedPayments from './PersonDetailedPayments'
+import Events from './Events'
 function Mainpage(){
     return(
         <>
         {/* <DevotteeDetails/> */}
         <div  className="mainpage" >
         <Routes>
+                     <Route  path='/' element={<Events/>}>  </Route>
             <Route  path='/devottee' element={<DevotteeDetails/>}>  </Route>
             <Route  path='/paymentdetails' element={<Paymentdetails/>}>  </Route>  
-            <Route  path='/' element={<TempleGallery/>}>  </Route>  
+            <Route  path='/templegallery' element={<TempleGallery/>}>  </Route>  
             <Route  path='/adddevottee' element={<AddDevottee/>}>  </Route>  
             <Route  path='/collections' element={<Collections/>}>  </Route>  
             <Route  path='/personpayments' element={<PersonDetailedPayments/>}>  </Route>
