@@ -3,7 +3,7 @@ import templevigrahas from '../assets/Templeimages/templevigrahas.jpeg'
 
 function Events(){
     return(
-        <div style={{fontSize:"11px"}}>
+        <div style={{overflow:"auto",textOverflow:"hidden",fontSize:"11px",width:"80%"}}>
             <h1> శ్రీ సీతా లక్ష్మణ హనుమత్సమేత కోదండరామ స్వామి కి అంకితం చేయబడిన త్రయాహ్నిక బ్రహ్మోత్సవాల ఆహ్వాన పత్రిక.</h1>
             <img style={{borderRadius:"2vh",height:"30vh",width:"35vw"}} src={Event} alt="Events" className='eventsimage'/>
            <h1>మొదటి రోజు: 19-05-2026 (ప్రారంభం)</h1>
