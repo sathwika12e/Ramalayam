@@ -14,10 +14,11 @@ function Collections(){
     },[])
      let sum=0
     return(
-        <div>
+        <div className="mainpage">
             <p>From Collections Page</p>
-            
-        <table className="table table-striped table-hover" style={{width:"80%",margin:"auto",marginTop:"50px"}}>
+            <p>This is only sampledata</p>
+          <div className="tablediv"> 
+        <table className="table" style={{width:"80%",margin:"auto",marginTop:"50px",textOverflow:"hidden",overflow:"auto"}}>
                     <thead>
                         <tr>
                             {/* <th>NO</th> */}
@@ -25,12 +26,12 @@ function Collections(){
                             <th>land (in acres)</th>
                             <th>Total to Pay (1000 /-)per acre</th>
                             <th>Paid till Now</th>
-                            <th>need to pay</th>
+                            {/* <th>need to pay</th> */}
                         </tr>
                     </thead>
                       <tbody>            
             {data?.map((i)=>{
-                sum=i.amtpaiddetails.map((each)=>each.type==="paintings"?each.amt:"").reduce((a,b)=>a+b)
+                sum=i.amtpaiddetails.map((each)=>each.type==="templechanda"?parseInt(each.amt):0).reduce((a,b)=>parseInt(a)+parseInt(b))
                console.log('from sum',sum)
                 return(   
                                    
@@ -39,7 +40,7 @@ function Collections(){
                         <td>{i.name.land} acres</td>
                         <td>{(i.name.land<=3)?3000:((i.name.land)*(i.amtperacre))}</td>
                         <td>{sum}</td>
-                        <td>{((i.name.land)*(i.amtperacre))-sum}</td>
+                        {/* <td>{((i.name.land)*(i.amtperacre))-sum}</td> */}
 
                     </tr>               
                 )
@@ -47,6 +48,7 @@ function Collections(){
              </tbody>
                   
         </table>
+        </div> 
         </div>
     )
 }

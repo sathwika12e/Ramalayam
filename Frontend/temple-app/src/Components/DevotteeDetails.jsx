@@ -19,6 +19,7 @@ function DevotteeDetails(){
     return(
         <div className="mainpage">
             <p>Devottee Details</p>
+            <p>This is only sampledata</p>
             {/* <input  onChange={(event)=>{setDevotees(backupdata),setData(event.target.value),console.log(event.target.value)}} type="search"/> */}
          
             <button onClick={()=>{navigate('/adddevottee')}}>+Add</button><br></br>
