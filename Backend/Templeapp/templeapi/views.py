@@ -5,14 +5,31 @@ from . serializers import DevotteeSerializer,payment_serializer
 from .models import DevotteeTable ,payment_table
 from datetime import datetime
 class devottedetails(APIView):
-    def get(self,request):
-        devottee_data=DevotteeTable.objects.all()
-        s_obj=DevotteeSerializer(devottee_data,many=True)
+    def get(self,request,pk=None):
+        if pk is not None:
+            devottee_data=DevotteeTable.objects.get(id=pk)
+            s_obj=DevotteeSerializer(devottee_data)
+            return Response(s_obj.data)
+        else:
+            devottee_data=DevotteeTable.objects.all()
+            s_obj=DevotteeSerializer(devottee_data,many=True)
 
-            
+                
         return Response(s_obj.data)
     def post(self,request):
         s_obj=DevotteeSerializer(data=request.data)
+        if s_obj.is_valid():
+            s_obj.save()
+            return Response(s_obj.data)
+        else:
+            return Response(s_obj.errors)
+    def put(self,request,pk):
+
+        print("from pk",pk,"request-data",request.data)
+        devottee_data=DevotteeTable.objects.get(id=pk)
+        data=request.data
+        s_obj=DevotteeSerializer(devottee_data,data=data)
+      
         if s_obj.is_valid():
             s_obj.save()
             return Response(s_obj.data)
@@ -52,6 +69,7 @@ class payment_details_api(APIView):
                 return Response(s_obj.data)
             else:
                 return Response(s_obj.errors)
+    
                 
            
     
