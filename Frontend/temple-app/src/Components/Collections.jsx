@@ -36,7 +36,7 @@ function Collections(){
                 return(   
                                    
                     <tr onClick={() => navigate("/personpayments", { state: { personData: i } })} style={{backgroundColor:"whitesmoke",height:"50px"}}>
-                        <td>{i.name.name}</td>
+                        <td style={{color:"blue",textDecoration:"underline"}}>{i.name.name}</td>
                         <td>{i.name.land} acres</td>
                         <td>{(i.name.land<=3)?3000:((i.name.land)*(i.amtperacre))}</td>
                         <td>{sum}</td>

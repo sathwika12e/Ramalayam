@@ -9,6 +9,7 @@ import AddDevottee from './AddDevottee'
 import Collections from './Collections'
 import PersonDetailedPayments from './PersonDetailedPayments'
 import Events from './Events'
+import ModifyDevotteedetails from './ModifyDevotteedetails'
 function Mainpage(){
     return(
         <>
@@ -22,6 +23,7 @@ function Mainpage(){
             <Route  path='/adddevottee' element={<AddDevottee/>}>  </Route>  
             <Route  path='/collections' element={<Collections/>}>  </Route>  
             <Route  path='/personpayments' element={<PersonDetailedPayments/>}>  </Route>
+             <Route  path='/modifydevotteedetails' element={<ModifyDevotteedetails/>}>  </Route>
         </Routes>
         {/* <Paymentdetails/> */}
         </div>

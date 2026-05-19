@@ -1,7 +1,8 @@
 import Event from '../assets/Templeimages/Event.jpeg'
 import templevigrahas from '../assets/Templeimages/templevigrahas.jpeg'
-
+import ramimg from '../svgimages/ramimg.svg'
 function Events(){
+    
     return(
         <div style={{backgroundColor:"whitesmoke",overflow:"auto",textOverflow:"hidden",fontSize:"11px",width:"80%"}}>
             <h1> శ్రీ సీతా లక్ష్మణ హనుమత్సమేత కోదండరామ స్వామి కి అంకితం చేయబడిన త్రయాహ్నిక బ్రహ్మోత్సవాల ఆహ్వాన పత్రిక.</h1>
@@ -37,6 +38,8 @@ function Events(){
 <u><h4>కారణం:</h4></u>సీతారాముల దివ్య కళ్యాణ మహోత్సవం. ఈ వేడుకను వీక్షించడం వల్ల కుటుంబాలలో సంతోషం, దాంపత్య అనుకూలత, శాంతి లభిస్తాయి. ఇది జీవాత్మ, పరమాత్మల కలయికకు ప్రతీక.</p>
 <h2>సాయంత్రం:</h2><h3> గజ వాహన సేవ గ్రామోత్సవం</h3><p>
 <u><h4>కారణం:</h4></u> ఏనుగు (గజం) ఐశ్వర్యానికి, రాజసానికి మరియు బలానికి చిహ్నం. గజ వాహనంపై స్వామివారిని ఊరేగించడం ద్వారా గ్రామానికి అఖండ ఐశ్వర్యం, సంపద, మరియు అరిష్ట నివారణ జరుగుతుందని నమ్ముతారు.</p>
+        {/* <img src={ramimg} alt="hanuman" style={{height:"30vh",width:"35vw",borderRadius:"2vh"}}/>
+        */}
         </div>
     )
 }
