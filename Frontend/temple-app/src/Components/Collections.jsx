@@ -26,6 +26,7 @@ function Collections(){
                             <th>land (in acres)</th>
                             <th>Total to Pay (1000 /-)per acre</th>
                             <th>Paid till Now</th>
+                            <th>status</th>
                             {/* <th>need to pay</th> */}
                         </tr>
                     </thead>
@@ -40,6 +41,7 @@ function Collections(){
                         <td>{i.name.land} acres</td>
                         <td>{(i.name.land<=3)?3000:((i.name.land)*(i.amtperacre))}</td>
                         <td>{sum}</td>
+                        <td>{(sum>=((i.name.land<=3)?3000:((i.name.land)*(i.amtperacre)))?"completed":"pending")==="completed"?<span style={{color:"green"}}>completed</span>:<span style={{color:"red"}}>pending</span>}</td>
                         {/* <td>{((i.name.land)*(i.amtperacre))-sum}</td> */}
 
                     </tr>               

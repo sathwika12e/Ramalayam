@@ -46,6 +46,7 @@ function Paymentdetails(){
           <option value="templechanda">templechanda</option>
            <option value="paintings">paintings</option>
            <option value="kavulu">kavulu</option>
+           <option value="poojari">poojari</option>
         </select><br></br><br></br>
         <input  ref={amtRef} type="number" placeholder='enter amount'/><br></br><br></br>
         <button  onClick={submitfun}>submit</button>
