@@ -15,6 +15,11 @@ class payment_table(models.Model):
    
     amtpaiddetails=models.JSONField(default=list)
 
+class templeexpenses(models.Model):
+    # id=models.AutoField()
+    comitteemember=models.CharField(max_length=100)
+    expensetype=models.CharField(max_length=100)
+    expenseamount=models.IntegerField()
     
     
     

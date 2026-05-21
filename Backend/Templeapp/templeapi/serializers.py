@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from rest_framework.serializers import ModelSerializer
-from .models import DevotteeTable,payment_table
+from .models import DevotteeTable,payment_table,templeexpenses
 class DevotteeSerializer(ModelSerializer):
     class Meta:
         model=DevotteeTable
@@ -28,6 +28,9 @@ class payment_serializer(ModelSerializer):
         if value is None:
             raise serializers.ValidationError("Name/DevotteeTable ID is required")
         return value
-        
+class templeexpenses_serializer(ModelSerializer):
+    class Meta:
+        model=templeexpenses
+        fields="__all__"     
             
         

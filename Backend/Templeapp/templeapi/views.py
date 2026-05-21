@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from . serializers import DevotteeSerializer,payment_serializer
-from .models import DevotteeTable ,payment_table
+from . serializers import DevotteeSerializer,payment_serializer,templeexpenses_serializer
+from .models import DevotteeTable ,payment_table,templeexpenses
 from datetime import datetime
 class devottedetails(APIView):
     def get(self,request,pk=None):
@@ -69,7 +69,32 @@ class payment_details_api(APIView):
                 return Response(s_obj.data)
             else:
                 return Response(s_obj.errors)
-    
+class Temple_expenses_api(APIView):
+    def get(self,request):
+        expenses_data=templeexpenses.objects.all()
+        s_obj=templeexpenses_serializer(expenses_data,many=True)          
+        return Response(s_obj.data)
+    def post(self,request):
+        data=request.data
+        s_obj=templeexpenses_serializer(data=data)
+        if s_obj.is_valid():
+            s_obj.save()
+            
+            return Response("success")
+        else:
+            return Response("api fail")
+        
+
+
+    # def delete(self,request,pk):
+    #     payment_details=payment_table.objects.get(pk.id)
+    #     for i in payment_details.amtpaiddetails:
+    #         if pk==i:
+    #             payment_details.amtpaiddetails.remove(i)
+    #     payment_details.save()
+
+        
+    #     return Response("Deleted successfully")
                 
            
     

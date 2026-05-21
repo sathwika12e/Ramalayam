@@ -3,5 +3,8 @@ from . import views
 urlpatterns=[
     path('devottee/',views.devottedetails.as_view()),
     path('devottee/<int:pk>/', views.devottedetails.as_view()),
-    path('paymentdetails/',views.payment_details_api.as_view())
+    path('paymentdetails/',views.payment_details_api.as_view()),
+    path('paymentdetails/<str:pk>/',views.payment_details_api.as_view()),
+     path('expensesdetails/',views.Temple_expenses_api.as_view())
+
 ]
