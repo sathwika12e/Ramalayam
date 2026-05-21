@@ -10,6 +10,8 @@ import Collections from './Collections'
 import PersonDetailedPayments from './PersonDetailedPayments'
 import Events from './Events'
 import ModifyDevotteedetails from './ModifyDevotteedetails'
+import AddExpenditure from './AddExpenditure'
+import TempleExpenditures from './TempleExpenditures'
 function Mainpage(){
     return(
         <>
@@ -24,6 +26,8 @@ function Mainpage(){
             <Route  path='/collections' element={<Collections/>}>  </Route>  
             <Route  path='/personpayments' element={<PersonDetailedPayments/>}>  </Route>
              <Route  path='/modifydevotteedetails' element={<ModifyDevotteedetails/>}>  </Route>
+                <Route  path='/addexpenditure' element={<AddExpenditure/>}>  </Route>
+            <Route path="/templeexpenditures" element={<TempleExpenditures/>}></Route>
         </Routes>
         {/* <Paymentdetails/> */}
         </div>
