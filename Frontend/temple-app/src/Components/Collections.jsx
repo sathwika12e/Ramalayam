@@ -2,6 +2,7 @@ import axios from "axios"
 import { useEffect,useState } from "react"
 import './Css/Mainpage.css'
 import { useNavigate } from "react-router-dom"
+import LoadingSpinner from "./LoadingSpinner"
 function Collections(){
     const [data,setData]=useState([])
     let navigate=useNavigate()
@@ -31,7 +32,7 @@ function Collections(){
                         </tr>
                     </thead>
                       <tbody>            
-            {data?.map((i)=>{
+            {data.length>=1?data?.map((i)=>{
                 sum=i.amtpaiddetails.map((each)=>each.type==="templechanda"?parseInt(each.amt):0).reduce((a,b)=>parseInt(a)+parseInt(b))
                console.log('from sum',sum)
                 return(   
@@ -46,7 +47,7 @@ function Collections(){
 
                     </tr>               
                 )
-            })}
+            }):<tr><td  colSpan="5"><span style={{marginLeft:"20%"}}></span><LoadingSpinner/>  Data is loading...</td></tr>}
              </tbody>
                   
         </table>

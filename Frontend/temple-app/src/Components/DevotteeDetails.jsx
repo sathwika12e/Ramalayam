@@ -3,7 +3,7 @@ import axios from 'axios'
 import { useEffect,useState } from 'react'
 import { useRef } from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import LoadingSpinner from './LoadingSpinner'
 function DevotteeDetails(){
     let count=0
     let navigate=useNavigate();
@@ -26,7 +26,7 @@ function DevotteeDetails(){
             <p>This is only sampledata</p>
             {/* <input  onChange={(event)=>{setDevotees(backupdata),setData(event.target.value),console.log(event.target.value)}} type="search"/> */}
          
-            <button onClick={()=>{navigate('/adddevottee')}}>+Add</button><br></br>
+            <button style={{borderRadius:"1vh",backgroundColor:"#0FFF3066",border:"2px solid white"}} onClick={()=>{navigate('/adddevottee')}}>+Add</button><br></br>
             <div className="tablediv">
                 <table className="table" cellSpacing="0" cellPadding="0" border="0">
                     <thead>
@@ -38,7 +38,7 @@ function DevotteeDetails(){
                         </tr>
                     </thead>
                     <tbody>            
-            {devotees?.map((devottee)=>{
+            {devotees.length>=1?devotees?.map((devottee)=>{
               count+=1
 console.log(count)
                 return(      
@@ -50,7 +50,7 @@ console.log(count)
                         <td onClick={()=>navigate('/modifydevotteedetails', { state: { devotteeData: devottee } })} style={{color:"blue"}}>modify</td>
                            </tr>               
                 )
-            })}
+            }):<tr><td colSpan="5"> <span style={{marginLeft:"20%"}}></span><LoadingSpinner/>Data is loading...</td></tr>}
              </tbody>
         </table>
         </div>
